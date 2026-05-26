@@ -183,6 +183,7 @@ setTimeout(() => {
 const options_container = document.getElementById("options_container");
 const _close_ = document.getElementById("close");
 const options = document.getElementById("options");
+const _option_ = document.getElementById("option");
 
 function option() {
 
@@ -215,6 +216,8 @@ const Me = document.getElementById("Me");
 const _TEXT_ = document.getElementById("_TEXT_");
 const input = document.getElementById("input");
 const _SKIP_ = document.getElementById("SKIP");
+const Me_Container = document.getElementById("Me_Container");
+const Me_Container2 = document.getElementById("Me_Container2");
 
 function _close() {
 
@@ -233,6 +236,19 @@ function _close() {
 
 
 
+
+
+
+
+
+
+
+const Home = document.getElementById("Home");
+const About = document.getElementById("About");
+const To_Contact = document.getElementById("To_Contact");
+const W_D_C = document.getElementById("W_D_C");
+
+const anchor = document.querySelector("anchor");
 
 
 function _Home_() {
@@ -271,4 +287,89 @@ function SKIP() {
     _SKIP_.style.animation = `none`;
 
     Glass_break.play();
+}
+
+
+
+
+const blur_ = document.getElementById("blur");
+const imgs_Container1 = document.getElementById("imgs_Container1");
+const imgs_Container2 = document.getElementById("imgs_Container2");
+const imgs_Container3 = document.getElementById("imgs_Container3");
+const imgs_Container4 = document.getElementById("imgs_Container4");
+
+let Me_Clicked = 0;
+
+
+function _ME_() {
+
+    Me_Clicked++;
+    
+    if ( Me_Clicked % 2 !== 0 ) {
+
+    Me.style.transition = `0.5s`;
+    Me.style.animationPlayState = `paused`;
+    Me.style.opacity = `1`;
+    Me.style.filter = `blur(0px)`;
+    Me.style.float = `none`;
+
+    _TEXT_.style.animationPlayState = `paused`;
+    input.style.animationPlayState = `paused`;
+    _Text_small.style.animationPlayState = `paused`;
+    _SKIP_.style.animationPlayState = `paused`;
+
+    Me_Container.innerHTML = ``;
+    Me_Container2.innerHTML = `<img src="1000053162.jpg" alt="SHREK" id="Me" height="350px" onclick="_ME_()">`;
+
+    FullName.style.filter = `blur(5px)`;
+    darkmode_container.style.filter = `blur(5px)`;
+    
+    options_container.style.filter = `blur(5px)`;
+    _option_.style.filter = `blur(5px)`;
+
+    _SKIP_.style.filter = `blur(5px)`;
+    _Text_small.style.filter = `blur(5px)`;
+
+    imgs_Container1.style.filter = `blur(5px)`;
+    imgs_Container2.style.filter = `blur(5px)`;
+    imgs_Container3.style.filter = `blur(5px)`;
+    imgs_Container4.style.filter = `blur(5px)`;
+
+    blur_.style.display = `inline-block`;
+    }
+
+
+
+    else {
+
+    Me.style.transition = `1s`;
+    Me.style.animationPlayState = `running`;
+    Me.style.opacity = `1`;
+    Me.style.filter = `blur(0px)`;
+    Me.style.float = `left`;
+
+    _TEXT_.style.animationPlayState = `running`;
+    input.style.animationPlayState = `running`;
+    _Text_small.style.animationPlayState = `running`;
+    _SKIP_.style.animationPlayState = `running`;
+
+    Me_Container2.innerHTML = ``;
+    Me_Container.innerHTML = `<img src="1000053162.jpg" alt="SHREK" id="Me" height="200px" onclick="_ME_()">`;
+
+    FullName.style.filter = `blur(0px)`;
+    darkmode_container.style.filter = `blur(0px)`;
+    
+    options_container.style.filter = `blur(0px)`;
+    _option_.style.filter = `blur(0px)`;
+
+    _SKIP_.style.filter = `blur(0px)`;
+    _Text_small.style.filter = `blur(0px)`;
+
+    imgs_Container1.style.filter = `blur(0px)`;
+    imgs_Container2.style.filter = `blur(0px)`;
+    imgs_Container3.style.filter = `blur(0px)`;
+    imgs_Container4.style.filter = `blur(0px)`;
+
+    blur_.style.display = `none`;
+    }
 }
