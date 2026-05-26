@@ -11,6 +11,7 @@ const Sci_Fi_Click = document.getElementById("Sci_Fi_Click");
 const Glitch = document.getElementById("Glitch");
 const Cave_Click = document.getElementById("Cave_Click");
 const Light_Bulb_Break = document.getElementById("Light_Bulb_Break");
+const Miqat = document.getElementById("Miqat");
 
 
 let Name_clicked = 0;
@@ -336,6 +337,10 @@ function _ME_() {
     imgs_Container4.style.filter = `blur(5px)`;
 
     blur_.style.display = `inline-block`;
+
+    setTimeout(() => {
+    Miqat.play();
+    }, 1000);
     }
 
 
